@@ -10,6 +10,7 @@ import NoteForm from "../NoteForm/NoteForm";
 import { useDebouncedCallback } from "use-debounce";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import SearchErorMessage from "../SearchErorMessage/SearchErorMessage";
 
 const PER_PAGE = 12;
 
@@ -45,6 +46,7 @@ function App() {
       </header>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
+      {data && data.notes.length === 0 && !isLoading && <SearchErorMessage />}
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)}>
           <NoteForm onClose={() => setIsModalOpen(false)} />
