@@ -5,7 +5,6 @@ const token = import.meta.env.VITE_NOTEHUB_TOKEN;
 
 export interface FetchNotesResponse {
   notes: Note[];
-  page: number;
   totalPages: number;
 }
 

@@ -30,7 +30,10 @@ function App() {
     placeholderData: keepPreviousData,
   });
 
-  const debounceSearchText = useDebouncedCallback(setSearchText, 300);
+  const debounceSearchText = useDebouncedCallback((text: string) => {
+    setSearchText(text);
+    setPage(1);
+  }, 300);
 
   return (
     <div className={css.app}>
