@@ -2,7 +2,10 @@ import { useState } from "react";
 import SearchBox from "../SearchBox/SearchBox";
 import css from "./App.module.css";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { fetchNotes, type FetchNotesResponse } from "../services/noteService";
+import {
+  fetchNotes,
+  type FetchNotesResponse,
+} from "../../services/noteService";
 import NoteList from "../NoteList/NoteList";
 import Pagination from "../Pagination/Pagination";
 import Modal from "../Modal/Modal";
